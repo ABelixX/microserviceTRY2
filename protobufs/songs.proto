@@ -1,0 +1,29 @@
+syntax = "proto3";
+package songs;
+
+service Recommendations{
+    rpc Recommend(RecommendationRequest) returns (RecommendationResponse);
+}
+
+
+message RecommendationRequest{
+    SongCategory category = 1;
+    int32 max_results = 2;
+}
+
+enum SongCategory {
+    POP = 0;
+    HIP_HOP = 1;
+    ELECTRONIC = 2;
+    FOLK = 4;
+    ROCK = 5;
+}
+
+message RecommendationResponse{
+    repeated SongRecommendation recommendations = 1;
+}
+
+message SongRecommendation{
+    int32 id = 1;
+    string name = 2;
+}
