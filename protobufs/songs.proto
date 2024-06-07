@@ -2,7 +2,7 @@ syntax = "proto3";
 package songs;
 
 service Recommendations{
-    rpc Recommend(RecommendationRequest) returns (RecommendationResponse);
+    rpc Recommend(RecommendationRequest) returns (RecommendationResponse) {};
 }
 
 
