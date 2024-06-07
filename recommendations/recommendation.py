@@ -1,10 +1,12 @@
+
 from concurrent import futures
 import random
 import grpc
 import time
 
-from songs_pb2 import SongCategory, SongRecommendation, RecommendationResponse
 import songs_pb2_grpc
+import songs_pb2
+from songs_pb2 import SongCategory, SongRecommendation, RecommendationResponse
 
 songs_categories = {
     SongCategory.POP: [

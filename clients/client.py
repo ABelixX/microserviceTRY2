@@ -1,6 +1,7 @@
 import grpc
 
-import songs_pb2_grpc, songs_pb2
+import songs_pb2_grpc
+import songs_pb2
 from songs_pb2 import SongCategory
 
 
